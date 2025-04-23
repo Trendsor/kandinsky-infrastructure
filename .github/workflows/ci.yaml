@@ -1,0 +1,12 @@
+name: Infrastructure CI
+on:
+  push:
+    paths:
+      - 'charts/infrastructure/**'
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Lint Helm Chart
+        run: helm lint charts/infrastructure

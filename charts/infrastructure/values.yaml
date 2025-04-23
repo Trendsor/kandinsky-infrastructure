@@ -1,0 +1,10 @@
+replicaCount: 1
+image:
+  repository: myregistry/infrastructure
+  tag: stable
+service:
+  port: 8080
+resources:
+  limits:
+    cpu: "500m"
+    memory: "256Mi"

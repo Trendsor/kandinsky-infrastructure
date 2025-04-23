@@ -1,0 +1,15 @@
+apiVersion: template.openshift.io/v1
+kind: Template
+metadata:
+  name: infrastructure-template
+objects:
+  - apiVersion: v1
+    kind: ConfigMap
+    metadata:
+      name: infra-config
+    data:
+      LOG_LEVEL: "INFO"
+parameters:
+  - name: ENV
+    description: Environment (dev/prod)
+    required: true
